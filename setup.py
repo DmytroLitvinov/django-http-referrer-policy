@@ -51,8 +51,8 @@ setup(
     long_description=readme + '\n\n' + history,
     author='Dmytro Litvinov',
     author_email='litvinov.dmytro.it@gmail.com',
-    python_requires='>=3.4.0',
-    url='https://github.com/DmytroLitvinov/django-http-referrer-policy',
+    python_requires='>=3.5.0',
+    url='https://django-http-referrer-policy.readthedocs.io/',
     packages=[
         'django_http_referrer_policy',
     ],
@@ -60,7 +60,7 @@ setup(
     install_requires=[],
     license="MIT",
     zip_safe=False,
-    keywords='django-http-referrer-policy',
+    keywords='django-http-referrer-policy django http-referrer',
     classifiers=[
         'Development Status :: 5 - Production/Stable',
         'Framework :: Django :: 1.11',
@@ -75,6 +75,7 @@ setup(
         'Programming Language :: Python :: 3.7',
     ],
     project_urls={
+        'Bug Reports': 'https://github.com/DmytroLitvinov/django-http-referrer-policy/issues',
         'Source': 'https://github.com/DmytroLitvinov/django-http-referrer-policy',
     },
 )
