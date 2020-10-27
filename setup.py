@@ -50,7 +50,7 @@ setup(
     description="""django-http-referrer-policy provides a middleware class implementing the Referrer-Policy header for Django-powered sites.""",
     long_description=readme + '\n\n' + history,
     author='Dmytro Litvinov',
-    author_email='litvinov.dmytro.it@gmail.com',
+    author_email='me@DmytroLitvinov.com',
     python_requires='>=3.5.0',
     url='https://django-http-referrer-policy.readthedocs.io/',
     packages=[
@@ -66,6 +66,8 @@ setup(
         'Framework :: Django :: 1.11',
         'Framework :: Django :: 2.1',
         'Framework :: Django :: 2.2',
+        'Framework :: Django :: 3.0',
+        'Framework :: Django :: 3.1',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: BSD License',
         'Natural Language :: English',
@@ -73,6 +75,8 @@ setup(
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
+        'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: 3.9',
     ],
     project_urls={
         'Bug Reports': 'https://github.com/DmytroLitvinov/django-http-referrer-policy/issues',
