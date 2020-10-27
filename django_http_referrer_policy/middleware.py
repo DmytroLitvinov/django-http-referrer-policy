@@ -16,7 +16,7 @@ class ReferrerPolicyMiddleware(MiddlewareMixin):
     on this class.
     """
     # https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy#Syntax
-    VALID_REFERRER_POLICIES = [
+    VALID_REFERRER_POLICIES = {
         'no-referrer',
         'no-referrer-when-downgrade',
         'origin',
@@ -25,7 +25,7 @@ class ReferrerPolicyMiddleware(MiddlewareMixin):
         'strict-origin',
         'strict-origin-when-cross-origin',
         'unsafe-url',
-    ]
+    }
 
     def __init__(self, get_response):
         self.get_response = get_response
