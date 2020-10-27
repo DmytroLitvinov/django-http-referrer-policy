@@ -1,4 +1,3 @@
-from django.conf import settings
 from django.core.exceptions import ImproperlyConfigured
 from django.test import TestCase
 from django.urls import reverse
@@ -29,17 +28,3 @@ class TestReferrerPolicyMiddleware(TestCase):
         with self.assertRaises(ImproperlyConfigured):
             with self.settings(REFERRER_POLICY='invalid'):
                 self.client.get(self.test_url)
-
-    def test_missing_value(self):
-        """
-        A missing header value is a configuration error.
-        """
-        old_value = getattr(settings, 'REFERRER_POLICY', None)
-        try:
-            if old_value is not None:
-                delattr(settings, 'REFERRER_POLICY')
-            with self.assertRaises(ImproperlyConfigured):
-                self.client.get(self.test_url)
-        finally:
-            if old_value is not None:
-                setattr(settings, 'REFERRER_POLICY', old_value)

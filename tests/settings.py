@@ -1,5 +1,5 @@
 # -*- coding: utf-8
-import django
+import django  # noqa
 
 DEBUG = True
 USE_TZ = True
@@ -20,7 +20,6 @@ INSTALLED_APPS = [
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sites",
-    "django_http_referrer_policy",
 ]
 
 SITE_ID = 1
@@ -28,4 +27,3 @@ SITE_ID = 1
 MIDDLEWARE = (
     'django_http_referrer_policy.middleware.ReferrerPolicyMiddleware',
 )
-

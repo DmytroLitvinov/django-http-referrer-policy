@@ -11,8 +11,8 @@ class ReferrerPolicyMiddleware(MiddlewareMixin):
     """
     A middleware implementing the Referrer-Policy header.
     The value of the header will be read from the REFERRER_POLICY
-    setting, which must be present and must be set to one of the
-    string values contained in the attribute VALID_REFERRER_POLICIES
+    setting, which must be set to one of the string values
+    contained in the attribute VALID_REFERRER_POLICIES
     on this class.
     """
     # https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy#Syntax
@@ -30,10 +30,9 @@ class ReferrerPolicyMiddleware(MiddlewareMixin):
     def __init__(self, get_response):
         self.get_response = get_response
         # One-time configuration and initialization.
-        if not hasattr(settings, 'REFERRER_POLICY'):
-            raise ImproperlyConfigured('settings.REFERRER_POLICY is not set.')
+        referrer_policy = getattr(settings, 'REFERRER_POLICY', 'no-referrer-when-downgrade')
 
-        if settings.REFERRER_POLICY not in self.VALID_REFERRER_POLICIES:
+        if referrer_policy not in self.VALID_REFERRER_POLICIES:
             raise ImproperlyConfigured(
                 "settings.REFERRER_POLICY has an illegal value."
             )
