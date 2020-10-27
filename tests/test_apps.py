@@ -1,4 +1,3 @@
-from django.apps import apps
 from django.test import TestCase
 
 from django_http_referrer_policy.apps import DjangoHttpReferrerPolicyConfig
