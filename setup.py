@@ -57,7 +57,7 @@ setup(
         'django_http_referrer_policy',
     ],
     include_package_data=True,
-    install_requires=[],
+    install_requires=['Django>=1.11'],
     license="MIT",
     zip_safe=False,
     keywords='django-http-referrer-policy django http-referrer',
