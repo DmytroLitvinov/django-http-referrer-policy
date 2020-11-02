@@ -3,6 +3,12 @@
 History
 -------
 
+1.1.1 (2020-11-02)
+++++++++++++++++++
+
+* Add deprecation warning about Django v3.0. Django itself has `default support <https://docs.djangoproject.com/en/3.0/ref/middleware/#referrer-policy>`_ of *Referrer-Policy* header in ``SecurityMiddleware`` via setting variable ``SECURE_REFERRER_POLICY``.
+
+
 1.1.0 (2020-10-27)
 ++++++++++++++++++
 
