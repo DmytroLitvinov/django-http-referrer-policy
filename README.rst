@@ -18,8 +18,8 @@ Django HTTP Referrer Policy
 django-referrer-policy provides a middleware class implementing `the Referrer-Policy header <https://www.w3.org/TR/referrer-policy/>`_ for
 `Django <https://www.djangoproject.com/>`_-powered sites.
 
-**Note**: Starting from Django v3.0, Django itself has `default support <https://docs.djangoproject.com/en/3.0/ref/middleware/#referrer-policy>`_
- of *Referrer-Policy* header in ``SecurityMiddleware`` via setting variable ``SECURE_REFERRER_POLICY``.
+**Note**: Starting from Django v3.0, Django itself has `default support <https://docs.djangoproject.com/en/3.0/ref/middleware/#referrer-policy>`_ 
+of *Referrer-Policy* header in ``SecurityMiddleware`` via setting variable ``SECURE_REFERRER_POLICY``.
 
 Documentation
 -------------
